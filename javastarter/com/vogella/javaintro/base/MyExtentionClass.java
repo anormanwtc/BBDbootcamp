@@ -1,4 +1,4 @@
 package com.vogella.javaintro.base;
 
-class MyExtensionClass extends MyBaseClass {
+public class MyExtentionClass extends MyBaseClass {
 }
