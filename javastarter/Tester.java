@@ -8,6 +8,5 @@ public class Tester {
         MyStaticExample.statMethod();
         MyExtentionClass test = new MyExtentionClass();
         test.hello();
-
     }
 }

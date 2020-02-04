@@ -10,5 +10,5 @@ public class MyStaticExample {
 }
 
 /*
-* If its not public then it cant be accessed outside of this file?
+* If its not public then it cant be accessed outside of this package/folder
 */
