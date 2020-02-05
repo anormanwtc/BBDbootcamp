@@ -1,0 +1,31 @@
+Build text with quotes so it works nicely
+
+mvn archetype:generate -DgroupId=com.vogella.build.maven.java "-DartifactId=com.vogella.build.maven.java" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DinteractiveMode=false"
+
+-------------------------------------------------------------------------------------------------------------------
+in the pom.xml		//config file
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+in order to tell it to use up to date stuff
+-------------------------------------------------------------------------------------------------------------------
+
+mvn clean package	//compile
+java -cp target/com.vogella.build.maven.java-1.0-SNAPSHOT.jar com.vogella.build.maven.java.App
+			/run ^
+mvn (package OR test)	//run tests?
+mvn clean		//remove old builds etc?
+
+Build example "Worked example: execute a Java program with Maven" not gotten working yet
+
+
+
+
+
+
+
+
+
