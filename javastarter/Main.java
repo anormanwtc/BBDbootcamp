@@ -1,7 +1,6 @@
-package com.vogella.javastarter.exercises;
+// package com.vogella.javastarter.exercises;   //This works with java Main.java
 
-import com.vogella.javastarter.exercises.Address;
-import com.vogella.javastarter.exercises.Person;
+import com.vogella.javastarter.exercises.*;     //this works with java Main
 
 public class Main {
     public static void main(String[] args) {
