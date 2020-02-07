@@ -1,0 +1,38 @@
+The following example shows a @Service Bean that uses constructor injection to obtain a required RiskAssessor bean:
+
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DatabaseAccountService implements AccountService {
+
+        private final RiskAssessor riskAssessor;
+
+        @Autowired
+        public DatabaseAccountService(RiskAssessor riskAssessor) {
+                this.riskAssessor = riskAssessor;
+        }
+
+        // ...
+
+}
+If a bean has one constructor, you can omit the @Autowired, as shown in the following example:
+
+@Service
+public class DatabaseAccountService implements AccountService {
+
+        private final RiskAssessor riskAssessor;
+
+        public DatabaseAccountService(RiskAssessor riskAssessor) {
+                this.riskAssessor = riskAssessor;
+        }
+
+        // ...
+
+}
+
+Using constructor injection we can set riskAsessor as final
+
+https://docs.spring.io/spring/docs/4.3.12.RELEASE/spring-framework-reference/htmlsingle/#beans
