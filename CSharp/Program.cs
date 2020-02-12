@@ -4,7 +4,7 @@ using System;
 using Hello;
 using System.Collections.Generic;
 using System.Linq;
-using Attribute;
+using Attributes;
 
 namespace CSharp
 {
@@ -24,6 +24,8 @@ namespace CSharp
             Console.WriteLine(a1.Moves());
             //2 - or this is called an object initializer
             Animal a2 = new Animal() {Name = "Scuzzy"};
+            a2.Name = "hello";
+            Console.WriteLine(a2.Moves());
 
             Delegates del = new Delegates();
             del.usingDelegates();

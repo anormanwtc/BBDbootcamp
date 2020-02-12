@@ -31,7 +31,7 @@ namespace Hello
         public Animal(int age) => this.age = age;
 
         //property
-        public string Name { get;set; } //shorthand creation of getters/setters for Name
+        public string Name { get; set; } //shorthand creation of getters/setters for Name
 
         //method
         public string Moves() => $"{Name} is moving";
