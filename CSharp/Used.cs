@@ -40,13 +40,13 @@ namespace Hello
         // } //return doesnt work as a single line function cause stuff is auto returned?
 
     }
-    public partial class Split {
-        // partials can be used to continually add parts to a class for different people
-        // or something like that
-        private int hello = 5;
-    }
-    public partial class Split {
-        private int there = 10;
-    }
+    // public partial class Split {
+    //     // partials can be used to continually add parts to a class for different people
+    //     // or something like that
+    //     private int hello = 5;
+    // }
+    // public partial class Split {
+    //     private int there = 10;
+    // }
 
 }

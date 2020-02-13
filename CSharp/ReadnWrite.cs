@@ -27,7 +27,8 @@ namespace CSharp
             {  
                 System.Console.WriteLine(lineRead);
             }
-            fileRead.Close(); 
+            fileRead.Close();
+            //fileRead.Dispose(); //alternate more general disposal
 
         }
     }
