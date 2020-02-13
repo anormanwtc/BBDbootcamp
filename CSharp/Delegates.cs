@@ -5,10 +5,8 @@ namespace CSharp
     public class Delegates
     {
         public delegate void Calculate(int x, int y);
-        // We can then have one or more methods which implement this delegate:
         public static void Add(int x, int y) => Console.WriteLine(x + y); 
         public static void Multiply(int x, int y) => Console.WriteLine(x * y);
-        // You can see that the two methods have the same method signatures as the delegate, which means we can now use these methods:
         public static void Invalid(int x, int y) => Console.WriteLine("Error");
         public static Calculate chooseMethod(char symbol) {
             if (symbol == '+')

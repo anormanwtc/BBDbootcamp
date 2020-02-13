@@ -13,6 +13,10 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
+            ReadnWrite.RnR();
+        }
+            public void Oldtests() {
+            new TaskExpl().AccessTheWebAsync();
             Console.WriteLine("Hello World!");
             //ello has been set to conditional("TEST_COND") in its file so will only appear with the line 1 #define TEST_COND
             Used.ello();
@@ -59,7 +63,6 @@ namespace CSharp
             foreach(var number in numbersQuery) //LINQ query would be called here
                 Console.Write(number + " ");
             Console.WriteLine("All of previous x < 40 && x > 3");
-
         }
 
         
