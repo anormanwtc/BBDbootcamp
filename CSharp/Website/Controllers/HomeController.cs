@@ -18,7 +18,6 @@ namespace Website.Controllers
             //loggin errors or something? Made by the default dotnet new mvc
             _logger = logger;
         }
-
         public IActionResult Index()
         {
             return View();

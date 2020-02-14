@@ -17,12 +17,12 @@ namespace Website.StaticData
 
         private static List<Person> listOfPeople = new List<Person>()
         {
-            new Person() { Id = 1, Name = "Gery", Department = "ATC", Years = 4.9M },
-            new Person() { Id = 2, Name = "Lucky", Department = "ATC", Years = 2.2M },
-            new Person() { Id = 3, Name = "Mike", Department = "ATC", Years = 5.5M },
-            new Person() { Id = 4, Name = "R2-D2", Department = "Nedbank", Years = 123.45M },
-            new Person() { Id = 5, Name = "BB-8", Department = "Absa", Years = 555.55M },
-            new Person() { Id = 6, Name = "C1-10P", Department = "Standard Bank", Years = 99 },
+            new Person() { Name = "Gery", Department = "ATC", Years = 4.9M },
+            new Person() { Name = "Lucky", Department = "ATC", Years = 2.2M },
+            new Person() { Name = "Mike", Department = "ATC", Years = 5.5M },
+            new Person() { Name = "R2-D2", Department = "Nedbank", Years = 123.45M },
+            new Person() { Name = "BB-8", Department = "Absa", Years = 555.55M },
+            new Person() { Name = "C1-10P", Department = "Standard Bank", Years = 99 },
         };
     }
 }

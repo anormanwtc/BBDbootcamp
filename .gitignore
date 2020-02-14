@@ -4,8 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # My chosen ignores
-dotnet/*
-*/.vscode/*
+**/wwwroot/*
 
 # User-specific files
 *.rsuser

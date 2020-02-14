@@ -4,7 +4,7 @@ namespace Website.Models
 {
     public class Person
     {
-        [Key] //sets itself counting upwards
+        [Key] //sets itself on creation counting upwards
         public int Id { get; set; }
         
         [Required]

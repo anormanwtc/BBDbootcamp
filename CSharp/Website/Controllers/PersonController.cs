@@ -55,6 +55,15 @@ namespace Website.Controllers
             }
             return View(People);
         }
+        public IActionResult UseDefaults()
+        {
+            List<Person> defaults = PersonData.People;
+            foreach(Person Dude in defaults) {
+                _db.People.Add(Dude);
+            }
+            _db.SaveChanges();
+            return View();
+        }
 
     }
 }
