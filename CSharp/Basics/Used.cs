@@ -30,8 +30,11 @@ namespace Hello
         public Animal() {}
         public Animal(int age) => this.age = age;
 
-        //property
+        //Without the get;set; you expose the exact reference, could this be exploitable?
         public string Name { get; set; } //shorthand creation of getters/setters for Name
+        //public {get; set;} is basically identical to without it but its "easier to change later?"
+        // You can change either like {private get; set {more code};}
+        // You can also manually make the get and set methods
 
         //method
         public string Moves() => $"{Name} is moving";
@@ -40,6 +43,9 @@ namespace Hello
         // } //return doesnt work as a single line function cause stuff is auto returned?
 
     }
+
+    //dont use partial classes if possible
+
     // public partial class Split {
     //     // partials can be used to continually add parts to a class for different people
     //     // or something like that

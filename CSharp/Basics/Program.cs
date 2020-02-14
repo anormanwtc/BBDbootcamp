@@ -13,9 +13,12 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            ReadnWrite.RnR();
+            // ReadnWrite.RnR();
+            Animal a1 = new Animal();
+            a1.Name = "Pixel";
+            Console.WriteLine(a1.Moves());
         }
-            public void Oldtests() {
+            public static void Oldtests() {
             new TaskExpl().AccessTheWebAsync();
             Console.WriteLine("Hello World!");
             //ello has been set to conditional("TEST_COND") in its file so will only appear with the line 1 #define TEST_COND
@@ -25,6 +28,7 @@ namespace CSharp
             //1 - can intitialize then set the variable like this
             Animal a1 = new Animal();
             a1.Name = "Pixel";
+            a1.Name = "Pixelrenamed";
             Console.WriteLine(a1.Moves());
             //2 - or this is called an object initializer
             Animal a2 = new Animal() {Name = "Scuzzy"};
