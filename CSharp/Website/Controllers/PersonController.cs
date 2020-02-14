@@ -12,22 +12,49 @@ namespace Website.Controllers
 {
     public class PersonController : Controller
     {
-        private readonly ILogger<PersonController> _logger;
-        public PersonController(ILogger<PersonController> logger)
+        private readonly MyDbContext _db;
+        [BindProperty]
+        public Person People { get; set; }
+        // private readonly ILogger<PersonController> _logger;
+        public PersonController(MyDbContext db)//ILogger<PersonController> logger)
         {
-            _logger = logger;
+        //     _logger = logger;
+                _db = db;
+        }
+        public IActionResult Index()
+        {
+            return View();
         }
         public IActionResult Details(int? id)
         {
             List<Person> ex = new List<Person>();
             if (!id.HasValue)
-                return NotFound();
+                return NotFound(); //Notfound is the 404 error page?
 
-            var person = PersonData.People.FirstOrDefault(p => p.Id == id.Value);
+            var person = _db.People.FirstOrDefault(p => p.Id == id.Value);
 
-            if (person == null)
-                return NotFound();
-            return View(person);
+            // if (person == null)
+            //     return NotFound();
+            return View(person); //Changed details to be fine with null (if/else)
         }
+        public IActionResult Add(int? id)
+        {
+            People = new Person();
+            return View(People);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Add()
+        {
+            if (ModelState.IsValid)
+            {
+                //create
+                _db.People.Add(People);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(People);
+        }
+
     }
 }

@@ -4,6 +4,8 @@
     ViewData["Title"] = "Person";
 }
 
+@if (Model != null)
+{
 <h2>@ViewData["Title"]</h2>
 <hr />
 <div>
@@ -30,5 +32,9 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-    @* The above breaks cause Model == null *@
 </div>
+}
+else {
+    <h1 class="text-danger">Error.</h1>
+    <h2 class="text-danger">The person Id you requested does not exist.</h2>
+}

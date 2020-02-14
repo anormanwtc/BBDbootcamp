@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Website.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Website
 {
@@ -24,6 +26,13 @@ namespace Website
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<MyDbContext>(
+                //dotnet add package Microsoft.EntityFrameworkCore.InMemory
+                options => options.UseInMemoryDatabase("PracticeDB")
+                );
+            //dotnet add package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,12 +60,6 @@ namespace Website
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "person",
-                    pattern: "{controller=Person}/{action=Details}/{id?}");
             });
         }
     }
